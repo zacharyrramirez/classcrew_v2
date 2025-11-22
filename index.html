@@ -4,90 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClassCrew - AI-Powered Grading Made Simple</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="bg-gradient">
       
       <!-- Navigation Bar -->
-      <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <div class="container mx-auto px-4">
-          <div class="flex items-center justify-between h-16">
-            <div class="flex items-center">
-              <a href="index.html" class="text-2xl font-bold text-indigo-600">ClassCrew</a>
-            </div>
-            <div class="flex items-center gap-6">
-              <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Home</a>
-              <a href="pricing.html" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Pricing</a>
-              <a href="auth.html" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors">Get Started</a>
-            </div>
+      <nav>
+        <div class="container">
+          <a href="index.html" class="logo">ClassCrew</a>
+          <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="auth.html" class="btn btn-primary">Get Started</a>
           </div>
         </div>
       </nav>
       
-      <section class="pt-32 pb-20 px-4">
-        <div class="container mx-auto text-center">
-          <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent animate-fade-in">
+      <!-- Hero Section -->
+      <section class="section-hero">
+        <div class="container">
+          <h1 class="animate-fade-in">
             AI-Powered Grading Made Simple
           </h1>
-          <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in">
+          <p class="text-xl text-gray max-w-2xl animate-fade-in">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <div class="flex gap-4 justify-center animate-fade-in">
-            <a href="/auth">
-              <button class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-glow transition-colors">
-                Start Grading Free
-              </button>
+          <div class="flex flex-center animate-fade-in">
+            <a href="auth.html" class="btn btn-primary btn-lg shadow-glow">
+              Start Grading Free
             </a>
-            <a href="pricing.html">
-              <button class="px-6 py-3 bg-white hover:bg-gray-50 text-indigo-600 font-semibold rounded-lg border-2 border-indigo-600 transition-colors">
-                View Pricing
-              </button>
+            <a href="pricing.html" class="btn btn-secondary btn-lg">
+              View Pricing
             </a>
           </div>
         </div>
       </section>
 
-      <section class="py-20 px-4">
-        <div class="container mx-auto">
-          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
-            Why Choose Class Crew?
+      <!-- Features Section -->
+      <section>
+        <div class="container">
+          <h2 class="text-center mb-12">
+            Why Choose ClassCrew?
           </h2>
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-glow transition-shadow">
-              <svg class="h-12 w-12 text-indigo-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="grid grid-cols-4">
+            <div class="card">
+              <svg class="icon text-indigo" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <h3 class="text-xl font-semibold mb-2">Accurate Grading</h3>
-              <p class="text-gray-600">
+              <h3>Accurate Grading</h3>
+              <p class="text-gray">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.
               </p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-glow transition-shadow">
-              <svg class="h-12 w-12 text-purple-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="card">
+              <svg class="icon text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
               </svg>
-              <h3 class="text-xl font-semibold mb-2">Lightning Fast</h3>
-              <p class="text-gray-600">
+              <h3>Lightning Fast</h3>
+              <p class="text-gray">
                 Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-glow transition-shadow">
-              <svg class="h-12 w-12 text-indigo-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="card">
+              <svg class="icon text-indigo" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
               </svg>
-              <h3 class="text-xl font-semibold mb-2">Secure & Private</h3>
-              <p class="text-gray-600">
+              <h3>Secure & Private</h3>
+              <p class="text-gray">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
               </p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-glow transition-shadow">
-              <svg class="h-12 w-12 text-purple-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="card">
+              <svg class="icon text-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
               </svg>
-              <h3 class="text-xl font-semibold mb-2">Detailed Feedback</h3>
-              <p class="text-gray-600">
+              <h3>Detailed Feedback</h3>
+              <p class="text-gray">
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
               </p>
             </div>
@@ -95,24 +88,23 @@
         </div>
       </section>
 
-      <section class="py-20 px-4 bg-gradient-hero">
-        <div class="container mx-auto text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+      <!-- CTA Section -->
+      <section class="bg-gradient-hero">
+        <div class="container text-center">
+          <h2 class="text-white mb-6">
             Ready to Transform Your Grading?
           </h2>
-          <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p class="text-xl text-muted mb-8 max-w-2xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
           </p>
-          <a href="/auth">
-            <button class="px-6 py-3 bg-white hover:bg-gray-100 text-indigo-600 font-semibold rounded-lg shadow-lg transition-colors">
-              Get Started Today
-            </button>
+          <a href="auth.html" class="btn btn-secondary btn-lg shadow-lg">
+            Get Started Today
           </a>
         </div>
       </section>
 
-      <footer class="py-12 px-4 border-t border-gray-200 bg-white">
-        <div class="container mx-auto text-center text-gray-600">
+      <footer>
+        <div class="container">
           <p>&copy; 2025 ClassCrew. All rights reserved.</p>
         </div>
       </footer>

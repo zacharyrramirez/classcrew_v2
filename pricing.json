@@ -3,7 +3,7 @@
     {
       "name": "Basic",
       "price": "$9.99",
-      "period": "/month /class",
+      "period": "/month per class",
       "description": "Perfect for individual teachers",
       "features": [
         "Core Automation Features",
@@ -14,7 +14,7 @@
     {
       "name": "Department",
       "price": "$199.99",
-      "period": "/year /professor",
+      "period": "/year per professor",
       "description": "Ideal for departments",
       "features": [
         "Automation across multiple courses",
@@ -27,7 +27,7 @@
     {
       "name": "University",
       "price": "$15k - $25k",
-      "period": "/year /campus",
+      "period": "/year per campus",
       "description": "For entire schools",
       "features": [
         "Full feature set + admin controls",
