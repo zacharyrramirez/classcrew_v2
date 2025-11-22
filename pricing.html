@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Class Crew</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        
+        <!-- Navigation Bar -->
+        <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="text-2xl font-bold text-indigo-600">Class Crew</a>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Home</a>
+                        <a href="pricing.html" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors">Pricing</a>
+                        <a href="/auth" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <section class="pt-32 pb-20 px-4">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                        Simple, Transparent Pricing
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Choose the perfect plan for your needs.
+                    </p>
+                </div>
+
+                <div id="pricing-container" class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Pricing cards will be loaded here -->
+                </div>
+
+                <div class="text-center mt-16">
+                    <p class="text-gray-600">
+                        All plans include a 14-day free trial. No credit card required.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-12 px-4 border-t border-gray-200">
+            <div class="container mx-auto text-center text-gray-600">
+                <p>&copy; 2025 Class Crew. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Fetch and display pricing data
+        fetch('pricing.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('pricing-container');
+                
+                data.plans.forEach(plan => {
+                    const card = document.createElement('div');
+                    card.className = 'relative bg-white rounded-lg shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow';
+                    
+                    let popularBadge = '';
+                    if (plan.popular) {
+                        popularBadge = `
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                Most Popular
+                            </div>
+                        `;
+                    }
+                    
+                    const featuresHTML = plan.features.map(feature => `
+                        <li class="flex items-start gap-2">
+                            <svg class="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">${feature}</span>
+                        </li>
+                    `).join('');
+                    
+                    card.innerHTML = `
+                        ${popularBadge}
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold mb-2">${plan.name}</h3>
+                            <p class="text-gray-600 mb-4">${plan.description}</p>
+                            <div class="flex items-baseline justify-center gap-1">
+                                <span class="text-4xl font-bold">${plan.price}</span>
+                                <span class="text-gray-600">${plan.period}</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            ${featuresHTML}
+                        </ul>
+                        <a href="/auth" class="block">
+                            <button class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                                Get Started
+                            </button>
+                        </a>
+                    `;
+                    
+                    container.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error loading pricing data:', error));
+    </script>
+</body>
+
+</html>

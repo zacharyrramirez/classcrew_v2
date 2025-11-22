@@ -1,0 +1,41 @@
+{
+  "plans": [
+    {
+      "name": "Basic",
+      "price": "$9.99",
+      "period": "/month /class",
+      "description": "Perfect for individual teachers",
+      "features": [
+        "Core Automation Features",
+        "Basic Analytics",
+        "Email Support"
+      ]
+    },
+    {
+      "name": "Department",
+      "price": "$199.99",
+      "period": "/year /professor",
+      "description": "Ideal for departments",
+      "features": [
+        "Automation across multiple courses",
+        "Instructor & course analytics",
+        "Fairness review included",
+        "Priority onboarding/support"
+      ],
+      "popular": true
+    },
+    {
+      "name": "University",
+      "price": "$15k - $25k",
+      "period": "/year /campus",
+      "description": "For entire schools",
+      "features": [
+        "Full feature set + admin controls",
+        "Priority access to new features",
+        "Advanced reporting + SIS/SL integrations",
+        "Dedicated security & compliance stack",
+        "Custom integrations +SLAs"
+      ]
+    }
+  ]
+}
